@@ -28,7 +28,7 @@ object SparkDataFrame2 {
       .format("csv")
       .option("header", "true") //reading the headers
       .option("mode", "DROPMALFORMED")
-      .load("/Users/Sravanthi Somalaraju/Documents/Bigdata ICPs/Module2/ICP3/survey.csv")
+      .load("/Users/bindu/Documents/Bigdata ICPs/Module2/ICP3/survey.csv")
 
 
 
@@ -46,7 +46,7 @@ object SparkDataFrame2 {
 
     //Save data to file
     println("\n Saved data to file")
-    unionDf.write.parquet("/Users/Sravanthi Somalaraju/Documents/Bigdata ICPs/Module2/ICP3/SparkDataFrame1/SparkDataFrame/temp.parquet")
+    unionDf.write.parquet("/Users/bindu/Documents/Bigdata ICPs/Module2/ICP3/SparkDataFrame1/SparkDataFrame/temp.parquet")
 
     // OrderBy with column Country
     unionDf.orderBy("Country").show()
@@ -81,7 +81,7 @@ object SparkDataFrame2 {
       .format("csv")
       .option("header", "true") //reading the headers
       .option("mode", "DROPMALFORMED")
-      .load("/Users/Sravanthi Somalaraju/Downloads/survey2.csv")
+      .load("/Users/bindu/Downloads/survey2.csv")
 
     //println("sravs")
     //department.show(100,true)
@@ -89,7 +89,7 @@ object SparkDataFrame2 {
       .format("csv")
       .option("header", "true") //reading the headers
       .option("mode", "DROPMALFORMED")
-      .load("/Users/Sravanthi Somalaraju/Downloads/survey1.csv")
+      .load("/Users/bindu/Downloads/survey1.csv")
    // people.show(100, true)
 
     //creating temp dataframes to perform join
