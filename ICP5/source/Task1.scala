@@ -43,11 +43,15 @@ object Task1 {
     trip_data.createOrReplaceTempView("Trip")
     station_data.createOrReplaceTempView("Station")
 
-
     val n_station = spark.sql("select * from Station")
 
     val n_trip = spark.sql("select * from Trip")
+    
+    //2. concatenate chunks into list & convert to DataFrame
 
+    val concat=spark.sql(sqlText="select concat(lat,long) from Stations").show()
+
+    
 
     //3.Remove duplicates using distinct
     val stationVertices = n_station
