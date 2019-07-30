@@ -16,7 +16,7 @@ spark.sparkContext.setLogLevel("ERROR")
 input_path = "/home/yong/Desktop/CS5590_Spark/ICP/14/"
 
 # Load data and select feature and label columns
-data = spark.read.format("csv").option("header", True).option("inferSchema", True).option("delimiter", ",").load("C:\\Users\\bindu\\Documents\\Bigdata ICPs\\Module2\\ICP7\\ScalaMachineLearning\\Automobile_data.csv")
+data = spark.read.format("csv").option("header", True).option("inferSchema", True).option("delimiter", ",").load("C:\\Users\\Sravanthi Somalaraju\\Documents\\Bigdata ICPs\\Module2\\ICP7\\ScalaMachineLearning\\Automobile_data.csv")
 data = data.withColumn("label", when(col("num-of-doors") == "four", 1).otherwise(0)).select("label", "length", "width", "height")
 
 
